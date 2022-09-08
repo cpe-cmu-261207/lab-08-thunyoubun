@@ -48,8 +48,7 @@ export default function Home() {
 
     for (let i = 0; i < 16; i++) {
       for (let j = 0; j < 16; j++) {
-        let rg = colors[Math.floor(Math.random() * colors.length)];
-        newPixels[i][j] = rg;
+        newPixels[i][j] = colors[Math.floor(Math.random() * colors.length)];
         setPixels(newPixels);
       }
     }
