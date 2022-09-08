@@ -8,6 +8,7 @@ export default function ColorPicker(props) {
 
   return (
     <div
+      id="1"
       style={{
         backgroundColor: color,
         width: "50px",
@@ -21,10 +22,14 @@ export default function ColorPicker(props) {
         //if this color is not selected, show this
         //borderColor: "black",
         //borderWidth: "2px",
+
+        borderColor: selColor === color ? "magenta" : "black",
+        borderWidth: selColor === color ? "7px" : "2px",
       }}
       onClick={() => {
         //set selecting color when clicked
         //your code here
+        setSelColor(color);
       }}
     />
   );
